@@ -16,12 +16,12 @@ If user name is already existing don't allow to create again
 
 # Assessment
 1. Fix all errors and ensure the project is working as expected
-2. Create new user only if user name is not existing the system, show error if userid already existing.
+2. Allow creation of a new user only if the username does not already exist in the system. Display an error message if the user name is already in use.
 3. Show successful message for valid data creation and redirect to user list.
 4. Create a github action workflow to build and release the package to docker container while merge to main branch from the feature branch.
 
 ## Notes
 Mongo db Details
 
-_Database name: **usermanagement**_ 
+_Database name: **usermanagement**_   
 _Collection Name: **userdata**_
