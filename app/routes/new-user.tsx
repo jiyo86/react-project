@@ -1,4 +1,4 @@
-import {Form, redirect } from "react-router";
+import {Form, Link, redirect } from "react-router";
 import { getDB } from "~/utils/databas";
 
 
@@ -23,6 +23,9 @@ export default function NewUser() {
       <button type="submit" className="bg-blue-500 text-white p-2 rounded">
         Add User
       </button>
+      <Link to="/" className="text-blue-500 underline">
+        Back to User List
+      </Link>
     </Form>
   );
 }
