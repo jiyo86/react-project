@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Link, useLoaderData } from "react-router-dom";
+import { getDB } from "~/utils/database";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,7 +10,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export async function loader() {
-  return;
+  const db = await getDB('usermanagement');
+  const users = await db.collection("userdata").find().toArray();
+  return users;
 }
 
 export default function UserList() {
