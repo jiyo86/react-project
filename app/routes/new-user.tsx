@@ -1,5 +1,5 @@
 import {Form, Link, redirect } from "react-router";
-import { getDB } from "~/utils/databas";
+import { getDB } from "~/utils/database";
 
 
 export async function action({ request }: { request: Request }) {
